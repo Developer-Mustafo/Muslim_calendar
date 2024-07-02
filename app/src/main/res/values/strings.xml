@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Muslim calendar</string>
+    <string name="app_name">Muslim taqvim</string>
+    <string name="successful">Ma\'lumot olindi</string>
+    <string name="failure">Internet yo\'q</string>
+    <string name="bomdod">Bomdod</string>
+    <string name="quyosh">Quyosh</string>
+    <string name="peshin">Peshin</string>
+    <string name="asr">Asr</string>
+    <string name="shom">Shom</string>
+    <string name="xufton">Xufton</string>
 </resources>
