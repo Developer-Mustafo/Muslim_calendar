@@ -45,11 +45,13 @@ import uz.coder.muslimcalendar.models.model.Item
 import uz.coder.muslimcalendar.models.model.Menu
 import uz.coder.muslimcalendar.models.model.MenuScreen
 import uz.coder.muslimcalendar.models.sealed.Screen.About
+import uz.coder.muslimcalendar.models.sealed.Screen.Duo
 import uz.coder.muslimcalendar.models.sealed.Screen.Tasbeh
 import uz.coder.muslimcalendar.models.sealed.Screen.AllahName
 import uz.coder.muslimcalendar.models.sealed.Screen.Calendar
 import uz.coder.muslimcalendar.models.sealed.Screen.ChooseRegion
 import uz.coder.muslimcalendar.models.sealed.Screen.Qazo
+import uz.coder.muslimcalendar.models.sealed.Screen.Namoz
 import uz.coder.muslimcalendar.ui.theme.Blue
 import uz.coder.muslimcalendar.ui.theme.Light_Blue
 import uz.coder.muslimcalendar.ui.view.CalendarTopBar
@@ -192,7 +194,7 @@ fun Bottom(
         .fillMaxSize(), verticalArrangement = Arrangement.Center) {
         Row(modifier = modifier.fillMaxWidth()) {
             MainButton(resId = R.drawable.book, text = stringResource(R.string.blessing)) {
-
+                controller.navigate(Duo.route)
             }
             MainButton(resId = R.drawable.calendar, text = stringResource(R.string.calendar)) {
                 controller.navigate(Calendar.route)
@@ -206,7 +208,7 @@ fun Bottom(
                 controller.navigate(Tasbeh.route)
             }
             MainButton(resId = R.drawable.muslim_man, text = stringResource(R.string.orderOfPrayer)) {
-
+                controller.navigate(Namoz.route)
             }
             MainButton(resId = R.drawable.carpet, text = stringResource(R.string.qazo)) {
                 controller.navigate(Qazo.route)

@@ -2,10 +2,14 @@ package uz.coder.muslimcalendar.todo
 
 import uz.coder.muslimcalendar.R
 import uz.coder.muslimcalendar.models.model.AllahName
+import uz.coder.muslimcalendar.models.model.Duo
+import uz.coder.muslimcalendar.models.model.Namoz
 
 const val REGION = "region"
 const val DEFAULT_REGION = "Urganch"
 const val ALLAH_NAME_INDEX = "allahNameIndex"
+const val DUO_INDEX = "duo_index"
+const val NAMOZ_INDEX = "namoz_index"
 const val BOMDOD = "bomdod_time"
 const val PESHIN = "peshin_time"
 const val ASR = "asr_time"
@@ -28,6 +32,178 @@ val regionList = listOf(
     "Samarqand", "Kattaqo'rg'on", "Urgut",
     "Guliston",
     "Termiz", "Denov", "Boysun"
+)
+
+
+val namozList = listOf(
+    Namoz(
+        "Bomdod",
+        """
+        1. «Alloh rizoligi uchun qibla tomonga yuzlanib, bugungi bomdod namozining ikki rakat sunnatini o'qishni niyat qildim», deb ko'ngildan o'tkaziladi.
+        2. Iftitoh takbiri: «Allohu akbar», deb namozga kiriladi.
+        3. Sano duosi o'qiladi.
+        4. Fotiha surasi o'qiladi.
+        5. Zam sura (qoladan kelganicha) o'qiladi.
+        6. Ruku qilinadi.
+        7. Rukudan «Sami'allohu liman hamidah», deb tik turiladi.
+        8. Tik turgan holda «Robbana lakal hamd», deyiladi.
+        9. Sajda qilinadi.
+        10. Sajdadan «Allohu akbar», deb o'tiriladi.
+        11. «Allohu akbar», deb ikkinchi marta sajda qilinadi.
+        12. Sajdadan «Allohu akbar», deb tik turiladi. Bu birinchi rakat bo'ldi.
+        13. Ikkinchi rakat ham xuddi shu tartibda davom ettiriladi.
+        14. Ikkinchi sajdadan keyin «Allohu akbar», deb o'tiriladi va o'qiladi:
+        a) Attahiyyat,
+        b) Salovot,
+        c) Robbana duo.
+        15. Avval o'ng, keyin chap yelka sari boqib: «Assalomu alaykum va rohmatulloh», deb salom beriladi.
+        
+        Shu bilan bomdod namozining ikki rakat sunnati tugaydi.
+        Bomdod namozining ikki rakat farzi ham xuddi shu tartibda o'qiladi.
+        Lekin bomdod namozining farzida faqat Fotiha surasi va zam sura o'qiladi. Namoz oxirida «Attahiyyat», «Salovot» va «Robbana» duosi o'qiladi.
+        """.trimIndent()
+    ),
+    Namoz(
+        "Peshin",
+        """
+        Peshin namozi to'rt rakat sunnat, to'rt rakat farz va ikki rakat sunnatdan iborat.
+        
+        Avval to'rt rakatli sunnat quyidagicha o'qiladi:
+        
+        1. Niyat qilinadi.
+        2. Takbiri tahrima.
+        3. Sano.
+        4. Fotiha va zam sura.
+        5. Ruku.
+        6. Rukudan turish.
+        7. Sajda.
+        8. Sajdadan turish.
+        9. Ikkinchi rakat ham shu tartibda o'qilib bo'lingandan so'ng o'tiriladi.
+        10. Attahiyyat o'qilib, uchinchi rakatga turiladi.
+        11. Faqatgina Fotiha surasi o'qiladi.
+        12. Ruku.
+        13. Rukudan turish.
+        14. Sajda.
+        15. Sajdadan turish.
+        16. To'rtinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        17. Attahiyyat.
+        18. Salovot.
+        19. Robbana.
+        20. Salom.
+        
+        To'rt rakatli farz namozining o'qilishi ham yuqoridagidek.
+        """.trimIndent()
+    ),
+    Namoz(
+        "Asr",
+        """
+        Asr namozi to'rt rakat farzdan iborat. Bu namoz quyidagicha o'qiladi:
+        
+        1. Niyat qilinadi.
+        2. Takbiri tahrima.
+        3. Sano.
+        4. Fotiha va zam sura.
+        5. Ruku.
+        6. Rukudan turish.
+        7. Sajda.
+        8. Sajdadan turish.
+        9. Ikkinchi rakat ham shu tartibda o'qilib bo'lingandan so'ng o'tiriladi.
+        10. Attahiyyat o'qilib, uchinchi rakatga turiladi.
+        11. Faqatgina Fotiha surasi o'qiladi.
+        12. Ruku.
+        13. Rukudan turish.
+        14. Sajda.
+        15. Sajdadan turish.
+        16. To'rtinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        17. Attahiyyat.
+        18. Salovot.
+        19. Robbana.
+        20. Salom.
+        """.trimIndent()
+    ),
+    Namoz(
+        "Shom",
+        """
+        Shom namozi uch rakat farz, ikki rakat sunnat va ikki rakat nafldan iborat.
+        
+        1. Uch rakat farzning o'qilishi: avval niyat qilinadi.
+        2. Takbiri tahrima.
+        3. Sano.
+        4. Fotiha va zam sura.
+        5. Ruku.
+        6. Rukudan turish.
+        7. Sajda.
+        8. Sajdadan turish.
+        9. Ikkinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        10. Attahiyyat o'qilib, uchinchi rakatga turiladi.
+        11. Faqatgina Fotiha surasi o'qiladi.
+        12. Ruku.
+        13. Rukudan turish.
+        14. Sajda.
+        15. Sajdadan turish.
+        16. To'rtinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        17. Attahiyyat.
+        18. Salovot.
+        19. Robbana.
+        20. Salom.
+        """.trimIndent()
+    ),
+    Namoz(
+        "Xufton",
+        """
+        Xufton namozi to'rt rakat farz, ikki rakat sunnat va uch rakat vitrdan iborat.
+        
+        Avval to'rt rakatli farz quyidagicha o'qiladi:
+        
+        1. Niyat qilinadi.
+        2. Takbiri tahrima.
+        3. Sano.
+        4. Fotiha va zam sura.
+        5. Ruku.
+        6. Rukudan turish.
+        7. Sajda.
+        8. Sajdadan turish.
+        9. Ikkinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        10. Attahiyyat o'qilib, uchinchi rakatga turiladi.
+        11. Faqatgina Fotiha surasi o'qiladi.
+        12. Ruku.
+        13. Rukudan turish.
+        14. Sajda.
+        15. Sajdadan turish.
+        16. To'rtinchi rakat ham shu tarzda o'qilib bo'lgach o'tiriladi.
+        17. Attahiyyat.
+        18. Salovot.
+        19. Robbana.
+        20. Salom.
+        """.trimIndent()
+    )
+)
+
+val dualist = listOf(
+    Duo("Duo","Robbana atina fid-dunya hasanatav-va fil axiroti hasanatav-va qina azaban-nar."),
+Duo("Salovat","Allohumma solli ‘ala Muhammadiv-va ‘ala ali Muhammad. Kama sollayta ‘ala Ibrohima va ‘ala ali Ibrohim. Innaka hamidum-majid. Allohumma barik ‘ala Muhammadiv-va ‘ala ali Muhammad. Kama barokta ‘ala Ibrohima va ‘ala ali Ibrohim. Innaka hamidum-majid."),
+Duo("Attahiyat duvosi","Attahiyyatu lillahi vas-solavatu vattoyyibat. Assalamu ‘alayka ayyuhan-nabiyyu va rohmatullohi va barokatuh. Assalamu ‘alayna va ‘ala ibadillahis-solihiyn. Ashhadu alla ilaha illallohu va ashhadu anna Muhammadan ‘abduhu va rosuluh."),
+Duo("Salovat (qisqa)","Allohumma solli ‘ala sayydina Muhammad"),
+Duo("Saloti munjiya","Allohumma solli ‘ala sayyidina Muhammadin va ‘ala ali sayyidina Muhammad, salatan tunjina biha min-jami’il ahvali val afat. Va taqzi lana biha jami’al hajat va tutohhiruna biha min-jami’is-sayyiat. Va tarfa-’una biha ‘alad-darojat va tuballig‘una biha aqsol-g‘oyoti, min-jami’il xoyroti fil-hayati va ba’dal mamat.\n" +
+"\n" +
+"Allohim! Janobi Payg‘ambarimiz Muhammad Mustafoga beadad salot va salom bo‘lsin. Bu salotlar, salomlar va duolar bizni har turli balo va musibatlardan xalos etsin, barcha ehtiyojlarimizni ketkizib, bizni gunohlardan poklasin. Bizni yuksak daraja va martabalarga ko‘tarsin. Allohim! Bu salot va salomlar tufayli o‘lgandan ke-yin xayr (yaxshilik)larga noil bo‘laylik. "),
+Duo("Saloti fathiyya ","Allohumma solli va sallim va barik ‘ala sayyidina Muhammadinil-fatihi lima ug‘liqo val-xotimi lima sabaqo, Nasiril-haqqi bilhaqqi, val hadi ila sirotikal-mustaqim va ‘ala alihi haqqo qadrihi va miqdarihil-’aziym.\n" +
+"\n" +
+"Allohim! Suyukli Payg‘ambarimiz Muhammad Mustafoga salot va salomlar bo‘lsin. Bizga Sening yashirin xazinalaringni ochib bergan Udir. Payg‘ambarlar halqasining oxiri Udir, Haqning eng katta yordamchisi Udir, insonlarga to‘g‘ri yo‘lni ko‘rsatgan Udir! Unga va yaqinlariga so‘ngsiz salot va salomlar bo‘lsin. "),
+Duo("Boshqa bir salovot ","Allohumma solli ‘ala sayyidina Muhammadinin-nabiyyil-ummiyyi va ‘ala alihi va sahbihi va sallim. \n" +
+"\n"),
+Duo("Azon Duosi","Allohumma robba hazihid da’vatit tammah. Vas-solatil qoimah, ati Muhammadanil vasiylata val faziylah. Vad-darojatal ’aliyatar rofi’a. Vab’as-hu maqomam mahmudanillaziy va’adtah. Varzuqna shafa-’atahu yavmal qiyamah. Innaka la tuxliful mi’ad!"),
+Duo("Qunut duosi","«Allohumma innaa nasta’iynuka va nastag‘firuka. Va nu’minu bika va natavakkalu alayka. Va nusniy alaykal xoyro kullahu. Nashkuruka va laa nakfuruk. Va naxla’u va natruku man yafjuruk. Allohumma iyyaaka na’budu va laka nusolliy va nasjudu va ilayka nas’aa va nahfidu. Narjuu rohmataka va naxshaa azaabaka. Inna azaabaka bil kuffaari mulhiq»."),
+Duo("Ro‘za tutish (saharlik, og‘iz yopish) duosi","نَوَيْتُ أَنْ أَصُومَ صَوْمَ شَهْرَ رَمَضَانَ مِنَ الْفَجْرِ إِلَى الْمَغْرِبِ، خَالِصًا لِلهِ تَعَالَى أَللهُ أَكْبَرُ\n" +
+"\n" +
+"Navaytu an asuvma sovma shahri ramazona minal fajri ilal mag‘ribi, xolisan lillahi taʼaalaa Allohu akbar.\n" +
+"\n" +
+"Maʼnosi: Ramazon oyining ro‘zasini subhdan to kun botguncha tutmoqni niyat qildim. Xolis Alloh uchun Alloh buyukdir."),
+Duo("Iftorlik (og‘iz ochish) duosi","اَللَّهُمَّ لَكَ صُمْتُ وَ بِكَ آمَنْتُ وَ عَلَيْكَ تَوَكَّلْتُ وَ عَلَى رِزْقِكَ أَفْتَرْتُ، فَغْفِرْلِى مَا قَدَّمْتُ وَ مَا أَخَّرْتُ بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ\n" +
+"\n" +
+"Allohumma laka sumtu va bika aamantu va aʼlayka tavakkaltu va aʼlaa rizqika aftartu, fag‘firliy ma qoddamtu va maa axxortu birohmatika yaa arhamar roohimiyn.\n" +
+"\n" +
+"Maʼnosi: Ey Alloh, ushbu Ro‘zamni Sen uchun tutdim va Senga iymon keltirdim va Senga tavakkal qildim va bergan rizqing bilan iftor qildim. Ey mehribonlarning eng mehriboni, mening avvalgi va keyingi gunohlarimni mag‘firat qilgil.")
 )
 val allahNames = listOf(AllahName("Alloh","O‘z sifatida, zotida yagona, ibodat qilish uchun eng munosib, undan boshqa iloh yo‘q Zot.\n" +
         "\n" +
